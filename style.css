@@ -1,135 +1,169 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Preview — kristynhe</title>
-  <style>
-    :root {
-      --bg: #0a0a0d;
-      --text: #f4f4f5;
-      --muted: #b6b6bb;
-      --accent: #d03b32;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: Georgia, serif;
-      line-height: 1.6;
-      opacity: 0;
-      animation: fadeIn 1.5s ease forwards;
-    }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+:root {
+  --bg: #0a0a0d;
+  --text: #f4f4f5;
+  --muted: #b6b6bb;
+  --accent: #d03b32;
+}
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 28px 42px;
-      border-bottom: 1px solid rgba(255,255,255,.1);
-    }
-    .brand {
-      font-size: 32px;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
-    nav a {
-      color: var(--text);
-      text-decoration: none;
-      margin-left: 12px;
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 0.07em;
-      opacity: 0.5;
-      transition: opacity 0.3s ease, color 0.3s ease;
-    }
-    nav a:hover, nav a.active {
-      opacity: 1;
-      color: var(--accent);
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    main {
-      width: min(900px, 90%);
-      margin: 60px auto;
-    }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Georgia, serif;
+  font-size: 15px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
 
-    figure {
-      margin-bottom: 24px;
-      overflow: hidden;
-      border: 1px solid rgba(255,255,255,.05);
-      transition: transform 0.4s ease;
-    }
-    figure:hover {
-      transform: scale(1.01);
-    }
-    img {
-      width: 100%;
-      display: block;
-    }
-    figcaption {
-      font-size: 12px;
-      color: var(--muted);
-      padding: 10px 14px;
-    }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-    section {
-      background: rgba(255,255,255,.02);
-      border: 1px solid rgba(255,255,255,.05);
-      padding: 22px;
-      margin-top: 30px;
-      border-radius: 6px;
-      animation: fadeIn 1.5s ease forwards;
-    }
+/* ——— HEADER ——— */
 
-    h1 {
-      font-size: 30px;
-      margin-bottom: 16px;
-    }
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 24px 42px 12px;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
 
-    footer {
-      text-align: center;
-      padding: 40px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="brand">kristynhe</div>
-    <nav>
-      <a href="#" class="active">(home)</a>
-      <a href="#">(projects)</a>
-      <a href="#">(selected work)</a>
-      <a href="#">(sketches)</a>
-      <a href="#">(design)</a>
-    </nav>
-  </header>
+.brand {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0;
+}
 
-  <main>
-    <figure>
-      <img src="https://picsum.photos/900/500?grayscale" alt="">
-      <figcaption>“cinematic self / 2025.” film tone study.</figcaption>
-    </figure>
+.brand img {
+  height: 42px;
+  width: auto;
+  display: block;
+  filter: brightness(0.95);
+}
 
-    <section>
-      <h1>Kristyn He — Film & Photography</h1>
-      <p>
-        I make images and moving images that stay between documentary and staged.
-        I like dream-core tones, soft light, and cinematic quiet.
-      </p>
-      <p>
-        London · Shanghai · Boston University (Film & TV). This space is my online studio —
-        to gather work, research, and fragments of stories.
-      </p>
-    </section>
-  </main>
+.nav a {
+  color: var(--text);
+  text-decoration: none;
+  margin-left: 14px;
+  text-transform: uppercase;
+  font-size: 12.5px;
+  letter-spacing: 0.09em;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
 
-  <footer>© 2025 · kristynhe</footer>
-</body>
-</html>
+.nav a:hover,
+.nav a.active {
+  opacity: 1;
+  color: var(--accent);
+}
+
+/* ——— MAIN CONTENT ——— */
+
+main {
+  width: min(900px, 90%);
+  margin: 70px auto;
+}
+
+figure {
+  margin-bottom: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.05);
+  transition: transform 0.4s ease;
+}
+
+figure:hover {
+  transform: scale(1.01);
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+figcaption {
+  font-size: 12px;
+  color: var(--muted);
+  padding: 10px 14px;
+  text-align: center;
+}
+
+/* ——— TEXT BLOCKS ——— */
+
+section {
+  background: rgba(255,255,255,.02);
+  border: 1px solid rgba(255,255,255,.05);
+  padding: 26px 28px;
+  margin-top: 30px;
+  border-radius: 6px;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+p {
+  margin-bottom: 14px;
+}
+
+/* ——— FOOTER ——— */
+
+footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+  font-size: 12px;
+  border-top: 1px solid rgba(255,255,255,.05);
+  margin-top: 50px;
+}
+
+/* ——— RESPONSIVE ——— */
+
+@media (max-width: 700px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav {
+    margin-top: 8px;
+  }
+  .nav a {
+    margin-left: 0;
+    margin-right: 12px;
+  }
+  main {
+    margin: 50px auto;
+  }
+}
