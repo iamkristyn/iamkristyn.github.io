@@ -36,7 +36,8 @@ body {
   font-weight: 600;
   color: #c94b42; /* Cherry red */
   margin: 0;
-  margin-top: 20px 
+  margin-top: 40px;
+  margin-left: 30px;
   letter-spacing: 1px;
   transition: color 0.4s ease;
 }
