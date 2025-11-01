@@ -25,20 +25,20 @@ body {
 .main-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 50px 100px 40px;
+  align-items: flex-end;
+  padding: 60px 80px 40px;
   position: relative;
 }
 
 /* ----- LOGO ----- */
 .logo {
   font-family: 'Dancing Script', cursive;
-  font-size: 80px;
+  font-size: 72px;
   font-weight: 600;
   color: #c94b42; /* Cherry red */
   margin: 0;
-  margin-top: 20px;
-  margin-left: 100px;
+  margin-top: 0px;
+  margin-left: 40px;
   letter-spacing: 1px;
   transition: color 0.4s ease;
 }
@@ -50,8 +50,8 @@ body {
 .nav {
   display: flex;
   gap: 25px; /* spacing between links */
-  margin-top: 100px;
-  margin-right: 40px; 
+  margin-top: 60px;
+  margin-right: 8px; 
 }
 
 .nav {
