@@ -1,67 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kristyn Universe</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Kristyn — film, photography, art. Dreamcore, cool tone." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>kristynhe — home</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="kristynhe — film, photography, design.">
 </head>
 <body>
   <header class="topbar">
-    <div class="title-block">
-      <h1>Kristyn</h1>
-      <p>Film · Photography · Art · 2025</p>
-    </div>
-    <div class="meta-block">
-      <p>London / Shanghai</p>
-      <p>
-        <a href="https://instagram.com/" target="_blank">@your.ig</a>
-      </p>
-    </div>
+    <div class="brand">kristynhe</div>
+    <nav class="nav">
+      <a href="index.html" class="active">(home)</a>
+      <a href="projects.html">(projects)</a>
+      <a href="selected-work.html">(selected work)</a>
+      <a href="sketches.html">(sketches)</a>
+      <a href="design.html">(design)</a>
+    </nav>
   </header>
 
-  <main class="wall">
-    <!-- each "entry" = one image + a small caption, like cherrywood -->
-    <article class="entry">
-      <img src="assets/photo1.png" alt="Work 01" loading="lazy" />
-      <p class="caption">“soft neon portrait”, 2025</p>
-    </article>
+  <main class="page">
+    <!-- hero image like cherrywood -->
+    <figure class="hero-image">
+      <img src="assets/photo1.png" alt="Kristyn work">
+      <figcaption>“cinematic self / 2025.” photography / film tone study.</figcaption>
+    </figure>
 
-    <article class="entry">
-      <img src="assets/photo2.png" alt="Work 02" loading="lazy" />
-      <p class="caption">photo / editorial / london</p>
-    </article>
-
-    <article class="entry">
-      <img src="assets/film1.png" alt="Work 03" loading="lazy" />
-      <p class="caption">film still — selene (wip)</p>
-    </article>
-
-    <article class="entry">
-      <img src="assets/art1.png" alt="Work 04" loading="lazy" />
-      <p class="caption">art / poster / experiment</p>
-    </article>
-
-    <!-- duplicate these article blocks for more works -->
+    <section class="text-block">
+      <h1>Kristyn He — film & photography</h1>
+      <p>
+        I make images and moving images that stay in the space between documentary and staged.
+        I like cool tones, dream-core moods, and little graphic details. This site is a working archive
+        for school applications, projects with friends, and things I’m still figuring out.
+      </p>
+      <p>
+        London · Shanghai · Boston University (Film & TV). Available for editorial portraits, BTS,
+        short films and experimental work.
+      </p>
+    </section>
   </main>
 
   <footer class="foot">
-    <p>Kristyn Universe · built on GitHub Pages · 2025</p>
+    <p>© 2025 · kristynhe · github pages</p>
   </footer>
-
-  <script>
-    // nice tiny fade for images
-    const imgs = document.querySelectorAll('.entry');
-    const io = new IntersectionObserver((ents)=>{
-      ents.forEach(e=>{
-        if(e.isIntersecting){
-          e.target.classList.add('in');
-          io.unobserve(e.target);
-        }
-      });
-    }, {threshold:0.1});
-    imgs.forEach(el=>io.observe(el));
-  </script>
 </body>
 </html>
