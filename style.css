@@ -97,7 +97,7 @@ body[data-theme="dark"] .site-header {
 
 @media (max-width: 900px) {
   .site-header-inner {
-    padding: 16px 32px 8px;
+    padding: 16px 18px 8px;
     flex-direction: column;
     gap: 10px;
   }
@@ -142,7 +142,7 @@ body:not(.page-index) .site-subtitle {
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .site-nav {
@@ -206,10 +206,15 @@ body.page-graphics .site-nav a[data-nav="graphics"]::after {
   font-size: 13px;
 }
 
+/* 隐藏原始按钮文本 */
+.theme-toggle span {
+  display: none;
+}
+
 /* 确保伪元素也继承正确的字体大小 */
 .theme-toggle::before,
 .theme-toggle::after {
-  font-size: inherit; /* 继承父元素的字体大小 */
+  font-size: inherit;
 }
 
 /* Light模式下的样式 */
@@ -676,7 +681,7 @@ body[data-theme="dark"] .list-preview {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 13px;
   opacity: 0;
   background-color: rgba(15, 15, 16, 0.22);
   color: #fff;
@@ -741,7 +746,7 @@ body[data-theme="dark"] .sw-caption {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 13px;
   opacity: 0;
   background-color: rgba(15, 15, 16, 0.25);
   color: #fff;
