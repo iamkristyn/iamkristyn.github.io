@@ -1,100 +1,92 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // Theme toggle
+document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
-  const themeToggles = document.querySelectorAll('.theme-toggle');
 
-  function applyTheme(theme) {
-    body.classList.remove('theme-light', 'theme-dark');
-    body.classList.add(theme === 'dark' ? 'theme-dark' : 'theme-light');
-    themeToggles.forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.theme === theme);
-    });
-    try {
-      localStorage.setItem('kh_theme', theme);
-    } catch (e) {}
+  // ===== Theme toggle =====
+  const themeToggle = document.querySelector("[data-theme-toggle]");
+  const storedTheme = window.localStorage.getItem("kristyn-theme");
+
+  if (storedTheme === "dark" || storedTheme === "light") {
+    body.setAttribute("data-theme", storedTheme);
+  } else {
+    body.setAttribute("data-theme", "light");
   }
 
-  let storedTheme = null;
-  try {
-    storedTheme = localStorage.getItem('kh_theme');
-  } catch (e) {}
-  applyTheme(storedTheme === 'dark' ? 'dark' : 'light');
-
-  themeToggles.forEach(btn => {
-    btn.addEventListener('click', () => {
-      applyTheme(btn.dataset.theme === 'dark' ? 'dark' : 'light');
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const current = body.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      const next = current === "dark" ? "light" : "dark";
+      body.setAttribute("data-theme", next);
+      window.localStorage.setItem("kristyn-theme", next);
     });
-  });
+  }
 
-  // View toggle (grid / list) and filters on index
-  const gridView = document.getElementById('gridView');
-  const listView = document.getElementById('listView');
-  const viewButtons = document.querySelectorAll('.view-toggle');
-  const filterButtons = document.querySelectorAll('.filter-toggle');
+  // ===== Index page interactions (grid/list + filters) =====
+  const indexRoot = document.querySelector("[data-page='index']");
+  if (indexRoot) {
+    const outerSection = indexRoot.querySelector(".projects-section");
+    const viewButtons = indexRoot.querySelectorAll("[data-view]");
+    const filterButtons = indexRoot.querySelectorAll("[data-filter]");
+    const projectCards = indexRoot.querySelectorAll(".project-card");
+    const projectRows = indexRoot.querySelectorAll(".project-row");
+    const listPreviewImg = indexRoot.querySelector(".list-preview img");
 
-  function setView(view) {
-    if (!gridView || !listView) return;
-    if (view === 'list') {
-      gridView.classList.add('hidden');
-      listView.classList.remove('hidden');
-    } else {
-      gridView.classList.remove('hidden');
-      listView.classList.add('hidden');
+    function setView(view) {
+      if (!outerSection) return;
+      if (view === "list") {
+        outerSection.classList.add("view-list");
+      } else {
+        outerSection.classList.remove("view-list");
+      }
+      viewButtons.forEach(btn => {
+        btn.classList.toggle("is-active", btn.dataset.view === view);
+      });
     }
+
+    function itemMatchesFilter(el, filter) {
+      if (!filter || filter === "all") return true;
+      const cat = (el.getAttribute("data-category") || "").toLowerCase();
+      return cat.split(",").map(s => s.trim()).includes(filter);
+    }
+
+    function applyFilter(filter) {
+      projectCards.forEach(card => {
+        card.style.display = itemMatchesFilter(card, filter) ? "" : "none";
+      });
+
+      projectRows.forEach(row => {
+        row.style.display = itemMatchesFilter(row, filter) ? "grid" : "none";
+      });
+
+      filterButtons.forEach(btn => {
+        btn.classList.toggle("is-active", btn.dataset.filter === filter);
+      });
+
+      if (listPreviewImg) {
+        const first = Array.from(projectRows).find(r => r.style.display !== "none");
+        if (first && first.dataset.preview) {
+          listPreviewImg.src = first.dataset.preview;
+        }
+      }
+    }
+
     viewButtons.forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.view === view);
-    });
-  }
-
-  viewButtons.forEach(btn => {
-    btn.addEventListener('click', () => setView(btn.dataset.view));
-  });
-
-  function applyFilter(filter) {
-    const gridCards = document.querySelectorAll('.project-card');
-    const listRows = document.querySelectorAll('.project-list-row');
-
-    gridCards.forEach(card => {
-      const type = card.dataset.type;
-      card.style.display = (filter === 'all' || filter === type) ? '' : 'none';
-    });
-
-    listRows.forEach(row => {
-      const type = row.dataset.type;
-      row.style.display = (filter === 'all' || filter === type) ? '' : 'none';
+      btn.addEventListener("click", () => setView(btn.dataset.view));
     });
 
     filterButtons.forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.filter === filter);
+      btn.addEventListener("click", () => applyFilter(btn.dataset.filter));
     });
-  }
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
-  });
-
-  // default state
-  applyFilter('all');
-  setView('grid');
-
-  // List view preview + click through
-  const previewImg = document.getElementById('listPreviewImage');
-  const rows = document.querySelectorAll('.project-list-row');
-
-  rows.forEach(row => {
-    function activateRow() {
-      rows.forEach(r => r.classList.remove('active'));
-      row.classList.add('active');
-      const src = row.dataset.preview;
-      if (previewImg && src) previewImg.src = src;
+    if (listPreviewImg) {
+      projectRows.forEach(row => {
+        row.addEventListener("mouseenter", () => {
+          const src = row.dataset.preview;
+          if (src) listPreviewImg.src = src;
+        });
+      });
     }
 
-    row.addEventListener('mouseenter', activateRow);
-    row.addEventListener('focus', activateRow);
-
-    row.addEventListener('click', () => {
-      const link = row.dataset.link;
-      if (link) window.location.href = link;
-    });
-  });
+    setView("grid");
+    applyFilter("all");
+  }
 });
