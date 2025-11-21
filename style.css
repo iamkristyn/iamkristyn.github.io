@@ -330,10 +330,12 @@ body[data-theme="dark"] .filter-block {
 }
 
 .projects-grid {
-  margin: 10px 0px 60px;
+  margin: 10px auto 60px;
+  max-width: 1440px;     
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px 20px;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 32px;                   /* 横向间距 */
+  row-gap: 40px;                   /* 纵向间距 */  
   margin-bottom: 60px; /* 最后一行后留出空白 */
   width: 100%;
 }
