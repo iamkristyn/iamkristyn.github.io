@@ -521,10 +521,10 @@ body[data-theme="dark"] .list-preview {
 /* ========= INFO PAGE ========= */
 
 .info-grid {
-  margin-top: 32px;
+  margin-top: 60px;
   display: grid;
-  grid-template-columns: 140px 440px;
-  column-gap: 80px;
+  grid-template-columns: 150px 420px;
+  column-gap: 110px;
   row-gap: 26px;
   align-items: start;  
 }
@@ -538,10 +538,11 @@ body[data-theme="dark"] .list-preview {
 
 .info-term {
   text-transform: uppercase;
+  text-align: right;
 }
 
 .info-detail {
-  max-width: 440px;
+  max-width: 420px;
 }
 
 /* ========= FILM PAGE ========= */
