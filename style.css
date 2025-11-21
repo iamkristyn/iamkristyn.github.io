@@ -61,14 +61,26 @@ body[data-theme="dark"] a:hover {
 /* ========= LAYOUT HELPERS ========= */
 
 .page-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 40px 32px 80px;
+  max-width: none;
+  margin: 0;
+  padding: 40px 0px 80px;
+  width: 100%;
+}
+
+/* 为内容区域添加与header相同的padding */
+.page-inner[data-page="index"] {
+  padding-left: 32px;
+  padding-right: 32px;
+  box-sizing: border-box;
 }
 
 @media (max-width: 900px) {
   .page-inner {
-    padding: 28px 18px 56px;
+    padding: 28px 0 56px; /* 移动端也移除左右padding */
+  }
+  .page-inner[data-page="index"] {
+    padding-left: 18px;
+    padding-right: 18px;
   }
 }
 
@@ -328,8 +340,9 @@ body[data-theme="dark"] .filter-block {
   margin-top: 28px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px 16px;
+  gap: 24px 20px;
   margin-bottom: 60px; /* 最后一行后留出空白 */
+  width: 100%;
   margin-left: 0;
   margin-right: 0;
 }
@@ -348,6 +361,7 @@ body[data-theme="dark"] .filter-block {
 
 .project-card {
   cursor: pointer;
+  width: 100%;
 }
 
 .project-thumb {
@@ -391,6 +405,7 @@ body[data-theme="dark"] .filter-block {
   text-transform: uppercase;
   text-align: left;
   width: 100%; /* 确保文字不超过图片宽度 */
+  box-sizing: border-box;
   padding: 0; /* 移除可能的内边距 */
 }
 
