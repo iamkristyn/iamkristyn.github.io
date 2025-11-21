@@ -521,11 +521,12 @@ body[data-theme="dark"] .list-preview {
 /* ========= INFO PAGE ========= */
 
 .info-grid {
-  margin-top: 52px;
+  margin-top: 32px;
   display: grid;
-  grid-template-columns: 150px 1.7fr;
-  column-gap: 110px;
-  row-gap: 32px;
+  grid-template-columns: 140px 440px;
+  column-gap: 80px;
+  row-gap: 26px;
+  align-items: start;  
 }
 
 @media (max-width: 900px) {
@@ -540,7 +541,7 @@ body[data-theme="dark"] .list-preview {
 }
 
 .info-detail {
-  max-width: 680px;
+  max-width: 440px;
 }
 
 /* ========= FILM PAGE ========= */
