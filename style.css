@@ -413,15 +413,16 @@ body[data-theme="dark"] .filter-block {
 }
 
 .project-caption-line:first-child {
-  margin-bottom: 10px; /* 数字和名称之间的间距 */
+  margin-bottom: 8px; /* 数字和名称之间的间距 */
 }
 
 .project-caption-line:nth-child(2) {
-  margin-bottom: 4px; /* 名称和类型之间的间距 */
+  margin-bottom: 3px; /* 名称和类型之间的间距 */
+  font-weight:400
 }
 
 .project-caption-line:nth-child(3) {
-  margin-bottom: 4px; /* 类型和年份之间的间距 */
+  margin-bottom: 3px; /* 类型和年份之间的间距 */
 }
 
 .project-caption-line:nth-child(4) {
@@ -471,6 +472,11 @@ body[data-theme="dark"] .list-table {
   padding: 8px 2px;
   border-bottom: 1px solid var(--border-light);
   cursor: pointer;
+}
+
+/* 添加这一行：让第二列（标题）加粗 */
+.project-row div:nth-child(2) {
+  font-weight: 400;
 }
 
 body[data-theme="dark"] .project-row {
