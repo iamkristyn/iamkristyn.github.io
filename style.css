@@ -196,7 +196,7 @@ body.page-graphics .site-nav a[data-nav="graphics"]::after {
   width: 16px;
 }
 
-/* Theme toggle */
+             /* Theme toggle */
 .theme-toggle {
   border: none;
   background: none;
@@ -334,8 +334,8 @@ body[data-theme="dark"] .filter-block {
   max-width: 1440px;     
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 32px;                   /* 横向间距 */
-  row-gap: 40px;                   /* 纵向间距 */  
+  column-gap: 16px;                   /* 横向间距 */
+  row-gap: 24px;                   /* 纵向间距 */  
   margin-bottom: 60px; /* 最后一行后留出空白 */
   width: 100%;
 }
@@ -367,7 +367,7 @@ body[data-theme="dark"] .filter-block {
 .project-thumb::before {
   content: "";
   display: block;
-  aspect-ratio: 4 / 3; /* 4:3比例 */
+  aspect-ratio: 16 / 10; 
 }
 
 .project-thumb img {
