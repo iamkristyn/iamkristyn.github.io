@@ -63,7 +63,7 @@ body[data-theme="dark"] a:hover {
 .page-inner {
   max-width: none;
   margin: 0;
-  padding: 40px 0px 80px;
+  padding: 40px 40px 80px;
   width: 100%;
 }
 
@@ -74,7 +74,7 @@ body[data-theme="dark"] a:hover {
 
 @media (max-width: 900px) {
   .page-inner {
-    padding: 28px 0 56px; /* 移动端也移除左右padding */
+    padding: 28px 18px 56px; /* 移动端也移除左右padding */
   }
   .page-inner[data-page="index"] {
     padding-left: 18px;
@@ -262,7 +262,6 @@ body[data-theme="dark"] .theme-toggle:hover::after {
 
 .filter-block {
   margin-top: 40px;
-  margin-left: 40px;
   display: inline-block;
   background-color: var(--metzger-pink); 
   padding: 8px 10px;
@@ -335,7 +334,7 @@ body[data-theme="dark"] .filter-block {
 }
 
 .projects-grid {
-  margin: 10px 40px 60px;
+  margin: 10px 0px 60px;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 24px 20px;
