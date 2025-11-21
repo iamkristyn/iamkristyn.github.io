@@ -74,11 +74,7 @@ body[data-theme="dark"] a:hover {
 
 @media (max-width: 900px) {
   .page-inner {
-    padding: 28px 18px 56px; /* 移动端也移除左右padding */
-  }
-  .page-inner[data-page="index"] {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding: 28px 18px 56px;  /* 手机左右大概 18px 就够 */
   }
 }
 
@@ -360,6 +356,7 @@ body[data-theme="dark"] .filter-block {
 }
 
 .project-thumb {
+  margin: 0;      
   background-color: #ddd;
   position: relative;
   overflow: hidden;
