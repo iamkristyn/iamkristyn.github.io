@@ -606,35 +606,6 @@ body[data-theme="dark"] .list-preview {
   margin: 0 0 14px;
 }
 
-.film-text-grid {
-  margin: 0 auto 24px;
-  max-width: 900px;
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  row-gap: 2px;
-  column-gap: 26px;
-}
-
-.film-text-label {
-  text-transform: uppercase;
-}
-
-.film-text-value {
-  text-transform: uppercase;
-}
-
-@media (max-width: 640px) {
-  .film-text-grid {
-    grid-template-columns: 1fr;
-    row-gap: 2px;
-  }
-
-  .film-text-label {
-    margin-top: 8px;    /* 每组 credits 之间留一点空气 */
-  }
-}
-
 /* Film stills */
 
 .film-stills {
