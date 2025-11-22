@@ -547,7 +547,7 @@ body[data-theme="dark"] .list-preview {
 /* ========= FILM PAGE ========= */
 
 .film-meta-block {
-  margin-top: 48px;
+  margin-top: 40px;
   max-width: 900px;
   margin-inline: auto;
   display: grid;
@@ -558,7 +558,7 @@ body[data-theme="dark"] .list-preview {
 
 .film-meta-label {
   text-transform: uppercase;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .film-meta-value {
@@ -567,7 +567,7 @@ body[data-theme="dark"] .list-preview {
 
 .film-video-wrapper {
   max-width: 900px;
-  margin: 24px auto 32px;
+  margin: 24px auto 12px;
 }
 
 .ratio-16x9 {
@@ -593,7 +593,7 @@ body[data-theme="dark"] .list-preview {
 
 .film-text-block {
   max-width: 900px;
-  margin: 0 auto 32px;
+  margin: 0 auto 24px;
 }
 
 .film-text-block h2 {
@@ -604,6 +604,35 @@ body[data-theme="dark"] .list-preview {
 
 .film-text-block p {
   margin: 0 0 14px;
+}
+
+.film-text-grid {
+  margin: 0 auto 24px;
+  max-width: 900px;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  row-gap: 2px;
+  column-gap: 26px;
+}
+
+.film-text-label {
+  text-transform: uppercase;
+}
+
+.film-meta-value {
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .film-text-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2px;
+  }
+
+  .film-text-label {
+    margin-top: 8px;    /* 每组 credits 之间留一点空气 */
+  }
 }
 
 /* Film stills */
