@@ -67,11 +67,6 @@ body[data-theme="dark"] a:hover {
   width: 100%;
 }
 
-/* 为内容区域添加与header相同的padding */
-.page-inner[data-page="index"] {
-  box-sizing: border-box;
-}
-
 @media (max-width: 900px) {
   .page-inner {
     padding: 28px 18px 56px;  /* 手机左右大概 18px 就够 */
@@ -336,7 +331,6 @@ body[data-theme="dark"] .filter-block {
   grid-template-columns: repeat(4, 1fr);
   column-gap: 16px;                   /* 横向间距 */
   row-gap: 24px;                   /* 纵向间距 */  
-  margin-bottom: 60px; /* 最后一行后留出空白 */
   width: 100%;
 }
 
