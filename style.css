@@ -614,10 +614,8 @@ body[data-theme="dark"] .list-preview {
 /* Film stills */
 
 .film-stills {
-  max-width: 1400px;
-  width:100%
-  margin: 0 auto 40px;
-  padding: 0 40px;
+  max-width: 900px;
+  margin: 0 auto 60px;        
 }
 
 .film-stills-title {
@@ -627,8 +625,10 @@ body[data-theme="dark"] .list-preview {
 
 .film-stills-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 8px; /* tighter spacing, thumbnails bigger */
+  margin: 10px auto 0px;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 16px;              
+  row-gap: 24px;    
 }
 
 @media (max-width: 900px) {
@@ -638,8 +638,10 @@ body[data-theme="dark"] .list-preview {
 }
 
 .film-still {
+  margin: 0;
   position: relative;
   background-color: #ddd;
+  overflow: hidden;
 }
 
 .film-still::before {
