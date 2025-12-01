@@ -738,7 +738,7 @@ body[data-theme="dark"] .list-preview {
   margin: 52px, auto, 40px;
   column-count:3
   column-gap: 20px;              
-  width: 100%; 
+
 }
 
 @media (max-width: 1100px) {
