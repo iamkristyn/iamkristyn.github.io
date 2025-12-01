@@ -817,13 +817,12 @@ body[data-theme="dark"] .sw-caption {
 /* ========= GRAPHICS ========= */
 
 .graphics-grid {
-  margin: 10px auto 0px;
+  margin: 52px auto 0px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 16px;       
   row-gap: 16px;    
   width: 100%;  
-  max-width: 1200px;     
 }
 
 @media (max-width: 640px) {
@@ -837,7 +836,6 @@ body[data-theme="dark"] .sw-caption {
   overflow: hidden;
   background-color: #ddd;
   cursor: pointer;
-  width: 100%;  
 }
 
 .ratio-graphics::before {
