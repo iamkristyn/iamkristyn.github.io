@@ -329,8 +329,8 @@ body[data-theme="dark"] .filter-block {
   max-width: 1440px;     
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  column-gap: 16px;                   /* 横向间距 */
-  row-gap: 24px;                   /* 纵向间距 */  
+  column-gap: 16px;       
+  row-gap: 24px;                
   width: 100%;
 }
 
