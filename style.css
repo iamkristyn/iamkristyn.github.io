@@ -818,17 +818,13 @@ body[data-theme="dark"] .sw-caption {
 /* ========= GRAPHICS ========= */
 
 .graphics-grid {
-  margin-top: 52px;
+  margin: 10px auto 0px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: 24px;       
-  row-gap: 24px;    
-}
-
-@media (max-width: 800px) {
-  .graphics-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 16px;       
+  row-gap: 16px;    
+  width: 100%;  
+  max-width: 1200px;     
 }
 
 @media (max-width: 640px) {
@@ -836,12 +832,12 @@ body[data-theme="dark"] .sw-caption {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
 .graphics-item {
   position: relative;
   overflow: hidden;
   background-color: #ddd;
   cursor: pointer;
-  width: 100%;
 }
 
 .ratio-graphics::before {
