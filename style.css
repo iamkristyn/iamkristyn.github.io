@@ -736,10 +736,12 @@ body[data-theme="dark"] .list-preview {
 
 .select-works-grid {
   margin-top: 52px;
+  max-width: 1440px;     
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 20px;              
   row-gap: 20px;  
+  width: 100%;
 }
 
 @media (max-width: 900px) {
@@ -759,6 +761,7 @@ body[data-theme="dark"] .list-preview {
   overflow: hidden;
   background-color: #ddd;
   cursor: pointer;
+  width: 100%;
 }
 
 /* Mixed ratios */
