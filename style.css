@@ -735,13 +735,12 @@ body[data-theme="dark"] .list-preview {
 /* ========= SELECT WORKS ========= */
 
 .select-works-grid {
-  margin: 52px 0 60px;
+  margin: 52px;
   display: grid;
   max-width: 1100px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 20px;              
   row-gap: 20px;  
-  width: 100%;
 }
 
 @media (max-width: 900px) {
@@ -761,7 +760,6 @@ body[data-theme="dark"] .list-preview {
   overflow: hidden;
   background-color: #ddd;
   cursor: pointer;
-  width: 100%;
 }
 
 /* Mixed ratios */
