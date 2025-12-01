@@ -737,10 +737,10 @@ body[data-theme="dark"] .list-preview {
 .select-works-grid {
   margin: 52px;
   display: grid;
-  max-width: 1100px;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 20px;              
   row-gap: 20px;  
+  align-items: start; 
 }
 
 @media (max-width: 900px) {
