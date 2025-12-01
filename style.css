@@ -836,6 +836,8 @@ body[data-theme="dark"] .sw-caption {
   overflow: hidden;
   background-color: #ddd;
   cursor: pointer;
+  width: 100%;
+}
 }
 
 .ratio-graphics::before {
