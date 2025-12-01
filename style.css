@@ -843,7 +843,6 @@ body[data-theme="dark"] .sw-caption {
   cursor: pointer;
   width: 100%;
 }
-}
 
 .ratio-graphics::before {
   content: "";
