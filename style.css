@@ -734,29 +734,35 @@ body[data-theme="dark"] .list-preview {
 
 /* ========= SELECT WORKS ========= */
 
+/* ========= SELECT WORKS ========= */
+
 .select-works-grid {
-  margin: 52px;
-  column-count:3
-  column-gap: 20px;              
-  width: 100%;   
+  margin-top: 52px;
+  column-count: 3;           /* 3列瀑布流布局 */
+  column-gap: 20px;          /* 列之间的水平间距 */
+  width: 100%;               /* 确保宽度100% */
 }
 
+/* 防止项目被分割到两列 */
 .sw-item {
-  break-inside: avoid;      /* 关键：防止项目被截断 */
-  margin-bottom: 16px;      /* 项目之间的垂直间距 */
+  break-inside: avoid;       /* 关键：防止项目被分割到两列 */
+  margin-bottom: 16px;       /* 项目之间的垂直间距 */
   position: relative;
-  width: 100%;              /* 确保宽度100% */
+  width: 100%;               /* 确保宽度100% */
   overflow: hidden;
   background-color: #ddd;
   cursor: pointer;
-  display: block;           /* 确保是块级元素 */
+  display: block;            /* 确保是块级元素 */
+  transition: transform 0.3s ease; /* 可选的悬停效果 */
 }
 
+/* 图片保持原始比例 */
 .sw-item img {
-  width: 100%;
-  height: auto;
+  width: 100%;               /* 宽度100% */
+  height: auto;              /* 高度自适应，保持原始比例 */
   display: block;
-  opacity: 1;     
+  opacity: 1;                /* 确保图片可见 */
+  transition: transform 0.3s ease; /* 可选的悬停缩放效果 */
 }
 
 /* 可选的悬停效果 */
@@ -781,9 +787,7 @@ body[data-theme="dark"] .list-preview {
   }
 }
 
-
-/* Hover overlay: title + year */
-
+/* 保持悬停标题效果 */
 .sw-caption {
   position: absolute;
   inset: 0;
@@ -793,21 +797,23 @@ body[data-theme="dark"] .list-preview {
   text-transform: uppercase;
   font-size: 12px;
   opacity: 0;
-  background-color: rgba(15, 15, 16, 0.6);
+  background-color: rgba(15, 15, 16, 0.85); /* 加深背景，提高可读性 */
   color: #fff;
   transition: opacity 0.25s ease;
   padding: 20px;
   text-align: center;
+  pointer-events: none;      /* 确保标题不干扰图片点击 */
 }
 
 body[data-theme="dark"] .sw-caption {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.85);
   color: var(--text-dark);
 }
 
 .sw-item:hover .sw-caption {
   opacity: 1;
 }
+
 
 /* ========= GRAPHICS ========= */
 
