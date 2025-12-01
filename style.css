@@ -735,7 +735,7 @@ body[data-theme="dark"] .list-preview {
 /* ========= SELECT WORKS ========= */
 
 .select-works-grid {
-  margin-top: 52px;
+  margin: 52px auto 60px;
   max-width: 1440px;     
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
