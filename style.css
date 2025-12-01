@@ -737,7 +737,10 @@ body[data-theme="dark"] .list-preview {
 .select-works-grid {
   margin-top: 52px;
   column-count: 3;           /* 3列瀑布流布局 */
-  column-gap: 20px;          /* 列之间的水平间距 */
+  column-gap: 20px;  /* 列之间的水平间距 */
+  margin-left: auto;
+  margin-right: auto;
+  justify-items: center;
 }
 
 /* 防止项目被分割到两列 */
@@ -749,7 +752,8 @@ body[data-theme="dark"] .list-preview {
   overflow: hidden;
   background-color: #ddd;
   cursor: pointer;
-  display: block;            /* 确保是块级元素 */
+  display: inline-block;     /* 改为inline-block，这是关键！ */
+  vertical-align: top;  
   transition: transform 0.3s ease; /* 可选的悬停效果 */
 }
 
