@@ -747,7 +747,7 @@ body[data-theme="dark"] .list-preview {
 /* 防止项目被分割到两列 */
 .sw-item {
   break-inside: avoid;       /* 关键：防止项目被分割到两列 */
-  margin-bottom: 16px;       /* 项目之间的垂直间距 */
+  margin-bottom: 20px;       /* 项目之间的垂直间距 */
   position: relative;
   width: 100%;               /* 确保宽度100% */
   overflow: hidden;
