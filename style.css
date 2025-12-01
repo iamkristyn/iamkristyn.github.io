@@ -738,8 +738,10 @@ body[data-theme="dark"] .list-preview {
   margin: 52px auto 60px;
   column-count: 3;           /* 3列瀑布流布局 */
   column-gap: 20px;          /* 列之间的水平间距 */
-  row-gap: 24px;   
-  width: 100%;               /* 确保宽度100% */
+  width: 100%;  /* 确保宽度100% */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 防止项目被分割到两列 */
