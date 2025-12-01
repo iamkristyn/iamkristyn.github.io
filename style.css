@@ -740,7 +740,6 @@ body[data-theme="dark"] .list-preview {
   column-gap: 20px;  /* 列之间的水平间距 */
   margin-left: auto;
   margin-right: auto;
-  justify-items: center;
 }
 
 /* 防止项目被分割到两列 */
