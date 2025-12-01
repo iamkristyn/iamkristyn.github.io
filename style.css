@@ -622,7 +622,7 @@ body[data-theme="dark"] .list-preview {
 .film-stills-grid {
   display: grid;
   margin: 10px auto 0px;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 12px;              
   row-gap: 12px;    
 }
