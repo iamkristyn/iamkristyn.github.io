@@ -554,6 +554,7 @@ body[data-theme="dark"] .list-preview {
   text-transform: uppercase;
   opacity: 0.9;
   font-weight: 400;
+  cursor: default;
 }
 
 .film-meta-value {
