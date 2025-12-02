@@ -595,6 +595,7 @@ body[data-theme="dark"] .list-preview {
 .film-text-block {
   max-width: 900px;
   margin: 0 auto 24px;
+  cursor: default;
 }
 
 .film-text-block h2 {
