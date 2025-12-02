@@ -548,13 +548,13 @@ body[data-theme="dark"] .list-preview {
   grid-template-columns: 110px 1fr;
   row-gap: 4px;
   column-gap: 26px;
+  cursor: default;
 }
 
 .film-meta-label {
   text-transform: uppercase;
   opacity: 0.9;
   font-weight: 400;
-  cursor: default;
 }
 
 .film-meta-value {
