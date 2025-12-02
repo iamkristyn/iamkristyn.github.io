@@ -127,6 +127,7 @@ body[data-theme="dark"] .site-title:hover {
   font-size: 10px;
   text-transform: uppercase;
   opacity: 0.85;
+  cursor: default;
 }
 
 /* Only show subtitle on index */
@@ -532,10 +533,12 @@ body[data-theme="dark"] .list-preview {
 
 .info-term {
   text-transform: uppercase;
+  cursor: default;
 }
 
 .info-detail {
   max-width: 420px;
+  cursor: default;
 }
 
 /* ========= FILM PAGE ========= */
@@ -548,17 +551,18 @@ body[data-theme="dark"] .list-preview {
   grid-template-columns: 110px 1fr;
   row-gap: 4px;
   column-gap: 26px;
-  cursor: default;
 }
 
 .film-meta-label {
   text-transform: uppercase;
   opacity: 0.9;
   font-weight: 400;
+  cursor: default;
 }
 
 .film-meta-value {
   text-transform: uppercase;
+  cursor: default;
 }
 
 /* Film video sections */
