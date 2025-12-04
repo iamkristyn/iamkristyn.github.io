@@ -951,6 +951,32 @@ body[data-theme="light"] .sw-lightbox-caption {
 
 /* ========= GRAPHICS ========= */
 
+/* 上方三列的 graphics grid */
+.graphics-grid-top {
+  margin-top: 52px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 16px;
+  row-gap: 16px;
+  margin-left: auto;
+  margin-right: 80px;
+}
+
+/* 响应式：平板两列，手机一列 */
+@media (max-width: 900px) {
+  .graphics-grid-top {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-right: 18px;  /* 如果你想和手机 padding 对齐可以顺便调一下 */
+  }
+}
+
+@media (max-width: 640px) {
+  .graphics-grid-top {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* 2列的 graphics grid */
 .graphics-grid {
   margin-top: 52px;
   display: grid;
