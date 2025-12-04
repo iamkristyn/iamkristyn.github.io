@@ -971,7 +971,7 @@ body[data-theme="light"] .sw-lightbox-caption {
 
 /* 2列的 graphics grid */
 .graphics-grid {
-  margin-top: 52px;
+  margin-top: 16px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   column-gap: 16px;       
